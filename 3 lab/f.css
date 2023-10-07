@@ -1,0 +1,197 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+@media screen and (min-width: 1200px) {
+    body {
+        background-image: url(./assets/bg.webp);
+        background-size: contain;
+        background-position: center;
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+    }
+
+    .hd {
+        padding-left: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .text {
+        color: white;
+        word-spacing: 40px;
+        font-size: 20px;
+        font-weight: bold;
+
+    }
+
+    .tlg {
+        display: flex;
+        align-items: center;
+    }
+
+    .lg {
+        padding-left: 20px;
+    }
+
+    .rt{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .btn {
+        font-size: 20px;
+        width: 300px;
+        background: none;
+        color: white;
+        margin: 15px;
+        margin-right: 40px;
+        padding: 20px;
+        border: 4px solid white;
+    }
+
+    .bone {
+        color:white;
+        font-size: 150px;
+    }
+
+    .sone {
+        color:white;
+        font-size: 18px;
+    }
+
+    .bs {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .ng {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 200px 40px 40px 40px;
+    }
+    .txt {
+        color: white;
+        font-size: 24px;
+        max-width: 300px;
+    }
+    .hrus {
+        display: none;
+    }
+    .hone {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    body {
+        background-image: url(./assets/bg.webp);
+        background-size: cover;
+        background-position: center;
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+    }
+
+    .hd {
+        padding-left: 20px;
+        display: flex;    
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .text {
+        color: white;
+        word-spacing: 40px;
+        font-size: 20px;
+        font-weight: bold;
+
+    }
+
+    .tlg {
+        display: flex;
+        padding-right: 40px;
+        padding-top: 20px;
+    }
+    
+    .hrus {
+        display: inline;
+    }
+    .lg {
+        display: none;
+    }
+
+    .rt{
+        display: none;
+    }
+
+    .btn {
+        font-size: 20px;
+        width: 300px;
+        background: none;
+        color: white;
+        margin: 15px;
+        margin-right: 40px;
+        padding: 20px;
+        border: 4px solid white;
+    }
+
+    .bone {
+       display: none;
+    }
+
+    .sone {
+        display: none;
+    }
+    .hone {
+        color:white;
+        padding-top: 40px;
+        word-spacing: 5px;
+        font-size: 20px;
+    }
+
+    .bs { 
+        justify-content: center;
+        text-align: center;
+    }
+
+    .ng {
+        display: flex;
+        justify-content: center; /* Горизонтальне вирівнювання в центрі */
+        align-items: center;
+        flex-direction: column;
+    }
+    .txt {
+        text-align: center;
+        color: white;
+        font-size: 24px;
+        max-width: 500px;
+        padding: 40px 0px 40px 0px;
+    }
+    .ims {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 230px 0px 0px 0px;
+    }
+}
