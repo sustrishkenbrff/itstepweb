@@ -1,0 +1,113 @@
+body {
+ background-color: #e5e5e5;
+}
+
+.textlogo {
+    text-align: center;
+    font-family:sans-serif;
+}
+
+.undl {
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+.bigone {
+    width: 80%;
+    height: 550px;
+    background-color: orange;
+    display: flex;
+    margin:auto;
+}
+
+.negr {
+
+    flex: 1;
+    width: 50%;
+}
+
+.nenegr {
+    background-color: purple;
+    flex: 1;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.mininegr {
+    background-image: url(../assets/img/2.jpg);
+    background-size: cover;
+    height: 55%;
+    display: flex;
+}
+
+.rabovlasnk {
+    display: flex;
+    height: 100%;
+}
+
+.childnegr {
+    flex: 1;
+    background-image: url(../assets/img/3.jpg);
+    background-size: cover;
+    width: 50%;
+    height: 45%;
+}
+
+.prinegr {
+    color:white;
+    flex: 1;
+    width: 50%;
+    height: 45%;
+    display: flex;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.mininenegr {
+    background-image: url(../assets/img/1.jpg);
+    background-size: cover;
+    height: 100%;
+    display: flex;
+}
+
+.nerabovlasnk {
+    display: flex;
+    height: 100%;
+}
+
+.nechildnegr {
+    flex: 1;
+    background-color: white;
+    width: 50%;
+    height: 100%;
+    color: orange;
+    display: flex;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.neprinegr {
+    flex: 1;
+    background-image: url(../assets/img/4.jpg);
+    background-size: cover;
+    width: 50%;
+    height: 100%;
+}
+
+.negro {
+    color: black;
+    font-size: 30px;
+}
+
+.nenegro {
+    color: white;
+    font-size: 30px;
+}
