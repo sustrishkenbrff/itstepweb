@@ -101,6 +101,64 @@ time, mark, audio, video {
     .hone {
         display: none;
     }
+    .container {
+        width: 100px;
+        aspect-ratio: 1/1;
+        position: relative;
+        border-radius: 50%;
+        color:white !important;
+        display: flex;
+       }
+      
+       .container>div:not(.arrow) {
+        top: 0;
+        transform-origin: bottom;
+        height: 50%;
+        position: absolute;
+        left: 50%;
+        animation:
+         identifier 0.5s both;
+        animation-delay: calc(var(--deg)* 0.25s);
+       }
+      
+       .arrow {
+        transform: rotate(-90deg);
+        width: 50%;
+        margin: auto;
+        opacity: 0.5;
+        animation: identifier1 0.5s both;
+        animation-delay: calc(var(--deg)* 0.25s);
+       }
+      
+       @keyframes identifier {
+        0% {
+         transform:
+          translateX(-50%) translateY(100%)
+        }
+      
+        50% {
+         transform:
+          translateX(-50%) translateY(0)
+        }
+      
+        100% {
+         transform:
+          translateX(-50%) rotate(calc(var(--deg)* 24deg))
+        }
+       }
+      
+       @keyframes identifier1 {
+      
+        0% {
+         opacity: 0;
+         transform: rotate(-90deg) scale(0.5);
+        }
+      
+        100% {
+         opacity: 0.5;
+         transform: rotate(-90deg) scale(1);
+        }
+       }
 }
 
 @media screen and (max-width: 1200px) {
@@ -194,4 +252,7 @@ time, mark, audio, video {
         align-items: center;
         padding: 230px 0px 0px 0px;
     }
+  .container {
+    display: none;
+  }
 }
