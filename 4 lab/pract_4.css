@@ -1,0 +1,207 @@
+:root {
+ --main-yellow: #e8b846
+}
+
+body {
+ margin: 0;
+}
+
+* {
+ box-sizing: border-box;
+}
+
+.section:nth-child(1) {
+ width:100%;
+ height: 80vh;
+ min-height: 700px;
+ background-image: url('./images/jhj-min.jpg');
+ background-position: bottom;
+ background-size: cover;
+ padding-top: 40px;
+
+ >div {
+  width:60%;
+  height: 80%;
+  margin: auto;
+
+  color: whitesmoke;
+
+  display: flex;
+  justify-content: end;
+
+  .title,.description {
+   padding-top: 35px;
+  }
+
+  .title {
+   width: 40%;
+   height: 100%;
+
+   font-size: 2.5em;
+   font-weight: bolder;
+   border-right: 10px solid var(--main-yellow);
+  }
+
+  .description {
+   width: 40%;
+   height: 100%;
+
+   font-size: 1.25em;
+   margin-left: 20px;
+
+   >div:last-child {
+    background-color: var(--main-yellow);
+    color: black;
+    border-radius: 10px;
+    padding: 20px 10px;
+    width: 50%;
+    text-align: center;
+
+    font-size: 1em;
+    font-weight: bolder;
+    text-transform: uppercase;
+
+    margin-top: 80px;
+   }
+  }
+ }
+}
+
+.section:nth-child(2) {
+ width: 100%;
+ height: 250px;
+ background-color: #d9d9d9;
+
+ display: flex;
+ justify-content: center;
+
+ >.item {
+  width: 20%;
+  height: 100%;
+  margin: 0 5px;
+  border-radius: 5px;
+  background-color: whitesmoke;
+
+  /* display: flex;
+  flex-direction: column;
+  align-items: center; */
+
+  position: relative;
+  top: -40px;
+
+  padding: 10px;
+
+  box-shadow: 0px 0px 75px -18px rgba(0,0,0,1);
+
+  >div:first-child {
+   margin: auto;
+   width: 40%;
+   aspect-ratio: 1/1;
+   border-radius: 50%;
+   background-color: var(--main-yellow);
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+   position: relative;
+   top: -40px;
+
+   >img {
+    width: 45%;
+   }
+  }
+
+  >div:nth-child(2) {
+   width:100%;
+   font-size: 1.25em;
+   font-weight: bolder;
+   margin-bottom: 10px;
+   text-align: center;
+  }
+
+  >div:last-child {
+   width: 100%;
+   text-align: center;
+   color: rgba(82, 82, 82, 0.655)
+  }
+ }
+}
+
+.orange {
+    background-color: #e7b846;
+    height: 100vh;
+}
+
+.room {
+   display: flex;
+   justify-content: center;
+   padding-top: 100px;
+}
+.stul {
+    background-image: url(./images/jhj-min.jpg);
+    width: 700px;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    z-index: 2;
+    position: relative;
+}
+
+
+.krug {
+    width: 228px;
+    height: 228px;
+    background-color: #e5e5e5;
+    border-radius: 50%;
+    z-index: 1;
+    position: absolute;
+    left: 65%;
+    bottom: -75%;
+}
+
+.discr {
+    width: 300px;
+    height: 325px;
+    box-shadow: 5px 5px 20px 0 rgba(0,0,0,0.2);
+    z-index: 3;
+    position: absolute;
+    background-color: white;
+    left: 60%;
+    top: 190%
+}
+
+.txt {
+    padding: 20px;
+}
+
+.slogan {
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: 'Open Sans',sans-serif;
+}
+
+
+.ttxt {
+    padding-top: 15px;
+    color: gray;
+    font-size: 1.05rem;
+}
+
+
+.learn {
+    background-color: var(--main-yellow);
+    color: black;
+    border-radius: 10px;
+    padding: 20px 10px;
+    width: 50%;
+    text-align: center;
+
+    font-size: 1em;
+    font-weight: bolder;
+    text-transform: uppercase;
+    margin-top: 20px;
+}
