@@ -4,6 +4,7 @@
 
 body {
  margin: 0;
+ background-color: #d9d9d9;
 }
 
 * {
@@ -204,4 +205,113 @@ body {
     font-weight: bolder;
     text-transform: uppercase;
     margin-top: 20px;
+}
+
+.gbg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.comfort {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: left;
+    margin-top: 42px;
+    margin-bottom: 60px;
+    gap: 30px;
+}
+
+.elegant {
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+
+.blok {
+    display: flex;
+    background-color: white;
+    width: 555px;
+    height: 200px;
+    padding: 20px;
+    box-shadow: 5px 5px 20px 0 rgba(0,0,0,0.2);
+}
+
+
+.ybox {
+    background-color: #e8b846;
+    height: 108px;
+    width: 120px;
+}
+
+.ddd {
+    padding-left: 15px;
+    font-size: 1.5rem;
+    font-family: sans-serif;
+}
+
+
+.unblok {
+    
+}
+
+.deid {
+    padding: 30px;
+    width: 610px;
+    height: 390px;
+    box-shadow: 5px 5px 24px 0 rgba(0,0,0,0.25);
+    background-color: white;
+    z-index: 2;
+    position: relative;
+}
+
+.z1 {
+    z-index: 1;
+    position: absolute;
+    top: 360%;
+    left: 10%;
+}
+.z2 {
+    z-index: 1;
+    position: absolute;
+    top: 375%;
+    left: 50%;
+}
+.z3 {
+    z-index: 1;
+    position: absolute;
+    top: 435%;
+    left: 30%;
+}
+
+.z4 {
+    z-index: 1;
+    position: absolute;
+    top: 475%;
+    left: 67%;
+    object-fit: cover;
+    display: block;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+.dlo {
+    font-size: 3.2rem;
+    font-weight: bold;
+}
+
+
+.ddsc {
+    color: gray;
+    font-size: 1.5rem;
+}
+
+.gbgs {
+    display: flex;
+    justify-content: center;
+    height: 1500px;
 }
