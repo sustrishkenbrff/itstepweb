@@ -1,0 +1,40 @@
+<head>
+ <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+
+
+ <div>
+  <textarea id="source-text"></textarea>
+  <button id="go" class="button-17" role="button">convert</button>
+ </div>
+
+ <div class="container">
+  <div id="result-text"></div>
+ </div>
+
+ <script>
+    document.getElementById("go").addEventListener("click", function () 
+    {
+        var sourceText = document.getElementById("source-text").value;
+        var resultContainer = document.getElementById("result-text");
+        resultContainer.innerHTML = "";
+        for (var i = 0; i < sourceText.length; i++)
+        {
+        var currentChar = sourceText[i].toLowerCase(); 
+
+        if (currentChar >= 'a' && currentChar <= 'z') 
+            {
+            var image = document.createElement("img");
+            image.src = " ./img/"+ currentChar + ".png";
+            resultContainer.appendChild(image);
+            } 
+        else 
+          {            
+            resultContainer.appendChild(document.createTextNode(sourceText[i]));
+          }
+        }
+      });
+ </script>
+</body>
