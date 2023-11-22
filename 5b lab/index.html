@@ -1,0 +1,46 @@
+<html>
+<head>
+<link rel="stylesheet" href="./index.css">
+
+</head>
+<body>
+<div class="main">
+    <div class="btns">
+        <button class="default sliding-button calcs" onclick="openDialog('dialog1')">Площа трикутника за двома сторонами і кутом між ними</button>
+        <button class="default sliding-button calcs" onclick="openDialog('dialog2')">Площа трикутника за трьома сторонами</button>
+        <button class="default sliding-button calcs">Площа трикутника за стороною трикутника і висотою</button>
+        <button class="default sliding-button calcs">Площа трикутника за трьома сторонами і радіусом описаного кола</button>
+        <button class="default sliding-button calcs">Перевіряємо чи число є паліндромом</button>
+        <button class="default sliding-button calcs">Чи з букв першого слова можна отримати друге слово</button>
+        <button class="default sliding-button calcs">Послідовність Фібаначі</button>
+        <button class="default sliding-button calcs">Чи воно належить послідовності Фібаначі </button>
+    </div>
+</div>
+
+<dialog id="dialog2">
+    <div>
+    <center><button class="close"" onclick="closeDialog('dialog2')"></button></center>
+    <div class="calculator">
+        <input type="number" id="side1" placeholder="Введіть довжину сторони 1">
+        <input type="number" id="side2" placeholder="Введіть довжину сторони 2">
+        <input type="number" id="side3" placeholder="Введіть довжину сторони 3">
+        <button class="rozr" onclick="calculateTriangle()">Розрахувати</button>
+        <center><p class="result" id="r1">2</p></center>
+    </div>
+    </div>
+</dialog>
+<dialog id="dialog1">
+    <div>
+        <center><button class="close" onclick="closeDialog('dialog1')"></button></center>
+        <div class="calculator">
+            <input type="number" id="triangleSide1" placeholder="Введіть довжину сторони 1">
+            <input type="number" id="triangleSide2" placeholder="Введіть довжину сторони 2">
+            <input type="number" id="triangleAngle" placeholder="Введіть кут між сторонами в градусах">
+            <button class="rozr" onclick="calculateTriangle2()">Розрахувати</button>
+        </div>
+        <center><p class="result" id="r2">1</p></center>
+    </div>
+</dialog>
+</body>
+<script src="./js/dialog.js"></script>
+</html>
