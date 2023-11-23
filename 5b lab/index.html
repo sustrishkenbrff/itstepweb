@@ -8,12 +8,12 @@
     <div class="btns">
         <button class="default sliding-button calcs" onclick="openDialog('dialog1')">Площа трикутника за двома сторонами і кутом між ними</button>
         <button class="default sliding-button calcs" onclick="openDialog('dialog2')">Площа трикутника за трьома сторонами</button>
-        <button class="default sliding-button calcs">Площа трикутника за стороною трикутника і висотою</button>
-        <button class="default sliding-button calcs">Площа трикутника за трьома сторонами і радіусом описаного кола</button>
-        <button class="default sliding-button calcs">Перевіряємо чи число є паліндромом</button>
-        <button class="default sliding-button calcs">Чи з букв першого слова можна отримати друге слово</button>
-        <button class="default sliding-button calcs">Послідовність Фібаначі</button>
-        <button class="default sliding-button calcs">Чи воно належить послідовності Фібаначі </button>
+        <button class="default sliding-button calcs" onclick="openDialog('dialog3')">Площа трикутника за стороною трикутника і висотою</button>
+        <button class="default sliding-button calcs" onclick="openDialog('dialog4')">Площа трикутника за трьома сторонами і радіусом описаного кола</button>
+        <button class="default sliding-button calcs" onclick="openDialog('dialog5')">Перевіряємо чи число є паліндромом</button>
+        <button class="default sliding-button calcs" onclick="openDialog('dialog6')">Чи з букв першого слова можна отримати друге слово</button>
+        <button class="default sliding-button calcs" onclick="openDialog('dialog7')">Послідовність Фібаначі</button>
+        <button class="default sliding-button calcs" onclick="openDialog('dialog8')">Чи воно належить послідовності Фібаначі </button>
     </div>
 </div>
 
@@ -39,6 +39,61 @@
             <button class="rozr" onclick="calculateTriangle2()">Розрахувати</button>
         </div>
         <center><p class="result" id="r2">1</p></center>
+    </div>
+</dialog>
+<dialog id="dialog3">
+    <div>
+        <center><button class="close" onclick="closeDialog('dialog3')"></button></center>
+        <div class="calculator">
+            <input type="number" id="r3side1" placeholder="Введіть довжину сторони 1">
+            <input type="number" id="r3side2" placeholder="Введіть довжину сторони 2">
+            <input type="number" id="r3side3" placeholder="Введіть висоту">
+            <button class="rozr" onclick="calculateTriangle3()">Розрахувати</button>
+        </div>
+        <center><p class="result" id="r3">3</p></center>
+    </div>
+</dialog>
+<dialog id="dialog4">
+    <div>
+        <center><button class="close" onclick="closeDialog('dialog4')"></button></center>
+        <div class="calculator">
+            <input type="number" id="r4side1" placeholder="Введіть довжину сторони 1">
+            <input type="number" id="r4side2" placeholder="Введіть довжину сторони 2">
+            <input type="number" id="r4side3" placeholder="Введіть радіус">
+            <button class="rozr" onclick="calculateTriangle4()">Розрахувати</button>
+        </div>
+        <center><p class="result" id="r4">4</p></center>
+    </div>
+</dialog>
+<dialog id="dialog5">
+    <div>
+        <center><button class="close" onclick="closeDialog('dialog5')"></button></center>
+        <div class="calculator">
+            <input type="number" id="r5side1" placeholder="Введіть число">
+            <button class="rozr" onclick="calculatePalindrome()">Розрахувати</button>
+        </div>
+        <center><p class="result" id="r5">5</p></center>
+    </div>
+</dialog>
+<dialog id="dialog6">
+    <div>
+        <center><button class="close" onclick="closeDialog('dialog6')"></button></center>
+        <div class="calculator">
+            <center><p class="result" style="margin:25px;">Слово: привіт</p></center>
+            <input type="text" id="r6word" placeholder="Введіть слово">
+            <button class="rozr" onclick="calcword()">Розрахувати</button>
+        </div>
+        <center><p class="result" id="r6">6</p></center>
+    </div>
+</dialog>
+<dialog id="dialog7">
+    <div>
+        <center><button class="close" onclick="closeDialog('dialog7')"></button></center>
+        <div class="calculator">
+            <input type="number" id="r7num" placeholder="Введіть число">
+            <button class="rozr" onclick="fibo()">Розрахувати</button>
+        </div>
+        <center><p class="result" id="r7">7</p></center>
     </div>
 </dialog>
 </body>
