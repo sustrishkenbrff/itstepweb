@@ -162,10 +162,16 @@ function fibo() {
 function calculateFibonacci(n) {
     if (n <= 1) {
         return n;
-    } else {
-        return calculateFibonacci(n - 1) + calculateFibonacci(n - 2);
+    } 
+      let a = 1;
+      let b = 1;
+      for (let i = 3; i <= n; i++) {
+        let c = a + b;
+        a = b;
+        b = c;
+      }
+      return b;
     }
-}
 
 // 8 calc dialog 8 
 function fibolist() {
