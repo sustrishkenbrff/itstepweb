@@ -1,14 +1,14 @@
 // dialog 
 
     function openDialog(dialogId) {
-        var dialog = document.getElementById(dialogId);
+        const dialog = document.getElementById(dialogId);
         if (dialog) {
             dialog.showModal();
         }
     }
 
     function closeDialog(dialogId) {
-        var dialog = document.getElementById(dialogId);
+        const dialog = document.getElementById(dialogId);
         if (dialog) {
             dialog.close();
         }
@@ -165,4 +165,33 @@ function calculateFibonacci(n) {
     } else {
         return calculateFibonacci(n - 1) + calculateFibonacci(n - 2);
     }
+}
+
+// 8 calc dialog 8 
+function fibolist() {
+    const inputElement = document.getElementById('r8num');
+    const resultElement = document.getElementById('r8');
+    const n = parseInt(inputElement.value);
+
+    if (!isNaN(n) && n >= 0) {
+        if (isFibonacciNumber(n)) {
+            resultElement.textContent = n + " належить послідовності Фібоначчі.";
+        } else {
+            resultElement.textContent = n + " не належить послідовності Фібоначчі.";
+        }
+    } else {
+        resultElement.textContent = "Будь ласка, введіть додатне ціле число.";
+    }
+}
+
+function isFibonacciNumber(num) {
+    let a = 0, b = 1;
+
+    while (b < num) {
+        const temp = a + b;
+        a = b;
+        b = temp;
+    }
+
+    return b === num;
 }
