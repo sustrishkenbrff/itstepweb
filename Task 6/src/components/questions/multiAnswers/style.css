@@ -13,6 +13,7 @@
  justify-content: flex-end;
  align-items: center;
  margin: 20px 0;
+ flex-direction: column;
 }
 
 .question.single-answer .check .button {
@@ -51,4 +52,19 @@
 .question.single-answer .check .button .correct.selected,
 .question.single-answer .check .button .wrong.selected {
  top: 0;
+}
+
+.show-correct-answer {
+    background-color: #6e7c97;
+    padding: 0.5em 1em;
+    border-radius: 20px;
+    text-transform: uppercase;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: 0.25s;
+    border: 0px;
+    font-size: 15px;
+    margin: 7px;
 }

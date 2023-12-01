@@ -10,7 +10,7 @@ const questions = [
    'Deserunt adipisicing est anim aliqua officia non ut do in.',
    'Amet magna proident labore laboris est commodo culpa ea.'
   ],
-  correctAnswer: 0
+  correctAnswer: 1
  },
  {
   question: 'Velit nulla fugiat reprehenderit deserunt.',
@@ -28,7 +28,7 @@ const questions = [
    'Lorem pariatur excepteur commodo voluptate deserunt duis eiusmod pariatur culpa fugiat.',
    'Amet cupidatat velit deserunt officia laboris proident deserunt et.'
   ],
-  correctAnswer: 0
+  correctAnswer: 2
  }
  ,
  {
