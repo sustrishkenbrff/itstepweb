@@ -4,6 +4,8 @@ import * as uuid from 'uuid';
 
 const MultiAnswerComponent = (props) => {
   const [showCorrectAnswer, setShowCorrectAnswer] = useState(false);
+  const [showCorrectAnswerBtn, setShowCorrectAnswerBtn] = useState(false);
+  const [uniqueIds, setUniqueIds] = useState([]);
   const [incorrectAttempts, setIncorrectAttempts] = useState(0); // amount
 
   let selectedAnswerIndex = [];
@@ -37,26 +39,34 @@ const MultiAnswerComponent = (props) => {
       correctRef.current.classList.remove('selected');
       setIncorrectAttempts((prevAttempts) => prevAttempts + 1);
       if (incorrectAttempts > 1) {
-        setShowCorrectAnswer(true);
+        setShowCorrectAnswerBtn(true);
       }
     }
   };
 
   const showCorrectAnswerClick = () => {
     correctRef.current.classList.add('selected');
-    setShowCorrectAnswer(false);
+    setShowCorrectAnswer(true);
   };
 
   useEffect(() => {
+    const ids = props.answers.map(() => uuid.v1());
+    setUniqueIds(ids);
+  }, [props.answers]);
+
+  useEffect(() => {
+    console.log(showCorrectAnswer)
     if (showCorrectAnswer) {
       props.correctAnswer.forEach((index) => {
-        const correctAnswerElement = document.getElementById(`label_${index}`);
-        if (correctAnswerElement) {
-          correctAnswerElement.style.color = 'green';
-        }
-      });
+          const correctAnswerElement = document.getElementsByClassName(`answer_${index}_${uniqueIds[index]}`);
+          const arr = Array.from(correctAnswerElement);
+          if (arr.length > 0 ) {
+            arr.forEach((index) => { index.style.color = 'green'; 
+          } )
+          }
+        });
     }
-  }, [showCorrectAnswer, props.correctAnswer]);
+  }, [uniqueIds, showCorrectAnswer, props.correctAnswer]);
   
 
   return (
@@ -66,9 +76,9 @@ const MultiAnswerComponent = (props) => {
       </div>
       <div className='answers'>
         {props.answers.map((answer, i) => {
-          const id = uuid.v1();
+          const id = uniqueIds[i];
           return (
-            <div key={id}>
+            <div key={id} className={`answer_${i}_${id}`}>
               <input
                 id={id}
                 type='checkbox'
@@ -89,7 +99,7 @@ const MultiAnswerComponent = (props) => {
             wrong
           </div>
         </div>
-        {showCorrectAnswer && (
+        {showCorrectAnswerBtn && (
           <button onClick={showCorrectAnswerClick} className='show-correct-answer'>
             show me correct answer
           </button>
